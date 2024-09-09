@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #FF4081;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .button {
+            margin: 20px 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #FF4081;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #e91e63;
+        }
+        .button.no {
+            background-color: #FF4081;
+        }
+        .button.no:hover {
+            background-color: #d81b60;
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Girlfriend?</h1>
+        <p>Udah lumayan lama kita kenal dan sering berinteraksi juga via Sosial Media</p>
+        <p>Tapi sebenernya, aku pengen coba hubungan kita ini lebih serius lebih dari temen</p>
+        <p>Cuman, baru sekarang aku beraninya</p>
+        <p>Jadi, aku udah lama mau tanya... Apa kamu mau jadi pacarku?</p>
+        <button class="button yes" onclick="alert('Yeay! Aku sangat bahagia! 😍')">Yes</button>
+        <button class="button no" id="noButton">No</button>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        noButton.addEventListener('mouseover', function() {
+            const randomX = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        });
+    </script>
+</body>
+</html>
